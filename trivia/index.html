@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkAnswer(button) {
+                var answer = button.getAttribute('mc-answer');
+                var response = document.getElementById('mc-response');
+
+                if (answer === 'correct') {
+                    button.style.backgroundColor = 'green';
+                    document.getElementById('mc-response').innerHTML = 'Correct!';
+                    response.style.color = 'green';
+
+                } else {
+                    button.style.backgroundColor = 'red';
+                    document.getElementById('mc-response').innerHTML = 'Incorrect';
+                    response.style.color = 'red';
+                }
+            }
+            function checkTextAnswer() {
+                var input = document.getElementById('text-answer');
+                var response = document.getElementById('text-response');
+                var answer = input.value;
+
+                if (answer == 'HyperText Markup Language' || answer == 'Hypertext Markup Language' || answer == 'hypertext markup language'
+                ) {
+                    input.style.backgroundColor = 'green';
+                    document.getElementById('text-response').innerHTML = 'Correct!';
+                    response.style.color = 'green';
+                } else {
+                    input.style.backgroundColor = 'red';
+                    document.getElementById('text-response').innerHTML = 'Incorrect';
+                    response.style.color = 'red'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What year was HTML released?</h3>
+                <button mc-answer="incorrect" onclick="checkAnswer(this)">1982</button>
+                <button mc-answer="incorrect" onclick="checkAnswer(this)">2000</button>
+                <button mc-answer="incorrect" onclick="checkAnswer(this)">1999</button>
+                <button mc-answer="correct" onclick="checkAnswer(this)">1991</button>
+                <button mc-answer="incorrect" onclick="checkAnswer(this)">2001</button>
+                <div id="mc-response"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What does HTML stand for?</h3>
+                <input type="text" id="text-answer">
+                <button onclick="checkTextAnswer()">Check Answer</button>
+                <div id="text-response"></div>
+            </div>
+        </div>
+    </body>
+</html>
