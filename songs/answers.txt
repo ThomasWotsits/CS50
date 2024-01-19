@@ -1,0 +1,2 @@
+I would characterise their audio aura as the average of the two genres that appear most prominently in there top 100 songs.
+I would average the energy, valence and danceability then selecting songs that are in the genre that best suits the averages of the energy, valence and danceability.
