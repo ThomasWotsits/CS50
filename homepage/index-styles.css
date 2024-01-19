@@ -1,0 +1,27 @@
+p.index {
+    text-align: center;
+}
+
+h1.index {
+    font-size: 120px;
+}
+
+h2.index {
+    font-size: 95px;
+}
+
+h3.index {
+    font-size: 60px;
+}
+
+h4.index {
+    font-size: 40px;
+}
+
+h3.awards {
+    text-align: left;
+}
+
+div.index {
+    padding: 10%;
+}

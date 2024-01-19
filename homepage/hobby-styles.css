@@ -1,0 +1,25 @@
+input[type=checkbox]:checked+label.strikethrough {
+    text-decoration: line-through;
+}
+
+.col-h1 {
+    width: 50%;
+    float: left;
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.col-h2 {
+    width: 50%;
+    float: right;
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+p.h-intro {
+    padding-left: 5vw;
+}
