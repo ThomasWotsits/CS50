@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mifflin-St Jeor Calorie Calculators
+{% endblock %}
+
+{% block main %}
+<!-- Mifflin-St Jeor formula -->
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <select required autofocus class="form-select" type="button" data-bs-toggle="dropdown" aria-expanded="false" name="msjgender" id="gender">
+                <option selected disabled>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Weight in kg</span>
+            <input required autocomplete="off" class="form-control" id="weight" name="msjweight" type="number" min="2.1" max="635" step="0.1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Height in cm</span>
+            <input required autocomplete="off" class="form-control" id="height" name="msjheight" type="number" min="54.6" max="272" step="0.1">
+        </div>
+        <div class="input-group mb-3">
+            <label for="msjage" class="form-label">Age in years</label>
+            <input required class="form-range" id="age" name="msjage" type="range" min="18" max="122" step="1" oninput="this.nextElementSibling.value = this.value">
+            <output id="value">68</output>
+        </div>
+        <div class="input-group mb-3">
+            <select required class="form-select" name="msjactivity-lvl" id="dropdown" placeholder="Activity Level">
+                <option selected disabled>Activity Level</option>
+                <option value=1.2>Sedentary</option>
+                <option value=1.375>Lightly active</option>
+                <option value=1.55>Moderately active</option>
+                <option value=1.725>Active</option>
+                <option value=1.9> Very active</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <h3>Activity level</h3>
+            <p>Sedentary (little or no exercise)</p>
+            <p>Lightly active (exercise 1 to 3 days/week)</p>
+            <p>Moderately active (exercise 3 to 5 days/week)</p>
+            <p>Active (exercise 6 to 7 days/week)</p>
+            <p>Very active (hard exercise 6 to 7 days/week)</p>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+    </form>
+{% endblock %}

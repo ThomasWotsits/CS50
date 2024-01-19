@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Water
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h1>Daily Water Calculator</h1>
+        <p>Below is a water calculator that can be used to calculate you daily water intake. It uses you weight and the amount of hours you do physical activity to calculate you daily water intake. It will give you a min and max value in ml.</p>
+    </div>
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Weight in kg</span>
+            <input required autocomplete="off" class="form-control" id="waterweight" name="waterweight" type="number" min="2.1" max="635" step="0.1">
+        </div>
+        <div class="multi-range-field my-5 pb-5">
+            <label for="waterphys" class="form-label">Hours of physical activity</label>
+            <input required class="form-range" id="phys" name="waterphys" type="range" min="0" max="24" step="1" oninput="this.nextElementSibling.value = this.value">
+            <output id="value">12</output>
+        </div>
+        <div class="form-floating">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+    </form>
+
+{% endblock %}

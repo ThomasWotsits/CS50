@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recipes
+{% endblock %}
+
+{% block main %}
+    <div class="button">
+        <nav class="d-grid gap-2 d-md-block">
+            <a href="/submit" class="btn btn-primary">Submit your recipe</a>
+        </nav>
+    </div>
+    </div class="table">
+    <table class="table table-striped table-hover" id="recipetable">
+        <thead>
+            <tr>
+                <th class="text-top">Name</th>
+                <th class="text-top">Calories</th>
+                <th class="text-top">Protein</th>
+                <th class="text-top">Carbohydrates</th>
+                <th class="text-top">Fats</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipes in recipes %}
+                <tr>
+                    <td class="text-table">{{ recipes.name }}</td>
+                    <td class="text-table">{{ recipes.calories }}</td>
+                    <td class="text-table">{{ recipes.protein }}</td>
+                    <td class="text-table">{{ recipes.carbs }}</td>
+                    <td class="text-table">{{ recipes.fats }}</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="table-active">{{ recipes.instructs }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

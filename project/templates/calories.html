@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calorie Calculators
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h1>Calorie Calculating</h1>
+        <p>When we eat and drink more calories than we use, our bodies store the excess as body fat. If this continues over time, we may put on weight. Knowing the calorie content of food and drink and how much we have makes it easier to keep track of our daily intake. Calories can be calcuated using two different formulas. These are the Harris-Benedict formula or the Mifflin-St Jeor formula. Below is an explanation of both formulas so you can select the one that you wish to use.</p>
+        <h2>The Harris-Benedict</h2>
+        <p>The Harris-Benedict Equation is a formula that uses your BMR and then applies an activity factor to determine your total daily energy expenditure (given in calories). The Harris-Benedict equation sprang from a study by James Arthur Harris and Francis Gano Benedict, which was published in 1919 by the Carnegie Institution of Washington in the monograph A Biometric Study Of Basal Metabolism In Man. The revision in 1984, improved its accuracy. The Harris-Benedict equation is thought to be the most accurate of all the BMR equations. However, you need to remember that calculating your BMR with a calculator is only a rough estimation and may differ from your actual bodily needs.</p>
+        <h2>The Mifflin-St Jeor</h2>
+        <p>The Mifflin-St Jeor equation is a widely used tool to determine the resting metabolic rate [RMR], which is defined as the number of calories burned while the body is in complete rest. RMR is also known as resting energy expenditure [REE]. The equation was developed by MD Mifflin and ST St Jeor and first introduced in a paper published in 1990.</p>
+    </div>
+    <div class="mb-3">
+        <nav class="d-grid gap-2 d-md-block">
+            <a class="btn btn-primary" href="HBcalories">The Harris-Benedict Calculator</a>
+            <a class="btn btn-primary" href="MSJcalories">The Mifflin-St Jeor Calculator</a>
+        </nav>
+    </div>
+{% endblock %}

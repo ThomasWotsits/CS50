@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submit a Recipe
+{% endblock %}
+
+{% block main %}
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Recipe Name</span>
+            <input required autocomplete="off" autofocus class="form-control" id="recname" name="recname" type="text">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Calories for 1 portion</span>
+            <input required class="form-control" id="calforone" name="calforone" type="number">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Protein in 1 portion</span>
+            <input required class="form-control" id="protein" name="protein" placeholder="">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Carbohydrates in 1 portion</span>
+            <input required class="form-control" id="carbs" name="carbs" type="number">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Fat in 1 portion</span>
+            <input required class="form-control" id="fat" name="fat" type="number">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text" id="inputGroup-sizing-default">Instructions</span>
+            <textarea required class="form-control" id="instructs" name="instructs" type="text" aria-label="With textarea"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+{% endblock %}
